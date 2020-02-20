@@ -8,7 +8,7 @@
     "browserify": "browserify src/index.js -s 'AFRAME' -p browserify-derequire",
     "build": "shx mkdir -p build/ && npm run browserify -- --debug -t [ envify --INSPECTOR_VERSION dev ] -o build/aframe.js",
     "codecov": "codecov",
-    "watch": "chokidar \"src/**/*.js\" -c \"npm run dist:max\"",
+    "watch": "chokidar \"src/**/*\" -c \"npm run dist:max\"",
     "dev": "npm run build && cross-env INSPECTOR_VERSION=dev node ./scripts/budo -t envify",
     "dist": "node scripts/updateVersionLog.js && npm run dist:min && npm run dist:max",
     "dist:max": "npm run browserify -s -- --debug | exorcist dist/aframe-master.js.map > dist/aframe-master.js",
