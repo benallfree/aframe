@@ -13,6 +13,10 @@ var DEFAULT_CONFIG = {
     BUFFER_SCALE: bufferScale,
     CARDBOARD_UI_DISABLED: true,
     ROTATE_INSTRUCTIONS_DISABLED: true
+  },
+  debug: {
+    warnIfNotHead: true,
+    warnIfFileProtocol: true
   }
 };
 
