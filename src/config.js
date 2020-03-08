@@ -20,9 +20,8 @@ var DEFAULT_CONFIG = {
   }
 };
 
-var extendDeep = require('./utils').extendDeep;
-
-var finalConfig = extendDeep({}, DEFAULT_CONFIG, window.AFRAME_CONFIG);
+var deepAssign = require('deep-assign');
+var finalConfig = deepAssign({}, DEFAULT_CONFIG, window.AFRAME_CONFIG);
 
 console.log({ finalConfig });
 
